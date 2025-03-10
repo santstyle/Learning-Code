@@ -6,4 +6,4 @@ print(x>7 or x<11)
 print(not(x>7 or x<11))
 #False
 
-#Operator logika digunakan untuk membuat operasi logika sepeti AND, OR, dan NOT. 
+# Operator logika digunakan untuk membuat operasi logika sepeti AND, OR, dan NOT. 
