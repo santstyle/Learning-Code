@@ -11,3 +11,4 @@ for (noAngkot; noAngkot <= jumlahAngkot; noAngkot++) {
         console.log('Angkot No. ' + noAngkot +  ' sedang tidak dapat beroperasi ');
     }
 }
+
