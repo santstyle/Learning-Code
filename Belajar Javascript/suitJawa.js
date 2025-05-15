@@ -1,44 +1,36 @@
-// Menangkap pilihan player
-var p = prompt(' pilih : gajah, semut, orang');
+var tanya = true
+while ( tanya ){
+    // Menangkap pilihan player
+    var p = prompt(' pilih : gajah, semut, orang');
 
-// Menangkap pilihan computer
+    // Menangkap pilihan computer
+    // Membangkitkan bilangan random
+    var comp = Math.random();
 
-// Membangkitkan bilangan random
-var comp = Math.random();
-
-if (comp < 0.34) {
-    comp = 'semut';
-} else if (comp >= 0.34 && comp < 0.67) {
-    comp = 'orang'
-} else {
-    comp = 'gajah'
-}
-
-// Menentukan rules
-var hasil = '';
-if (p == comp) {
-    hasil = 'SERI !';
-} else if (p === 'gajah') {
-    if (comp == 'semut') {
-        hasil = 'KALAH !';
+    if (comp < 0.34) {
+        comp = 'semut';
+    } else if (comp >= 0.34 && comp < 0.67) {
+        comp = 'orang'
     } else {
-        hasil = 'MENANG !';
+        comp = 'gajah'
     }
-} else if (p === 'semut') {
-    if (comp == 'gajah') {
-        hasil = 'MENANG !';
-    } else {
-        hasil = 'KALAH !';
-    }
-} else if (p === 'orang') {
-    if (comp == 'gajah') {
-        hasil = 'KALAH!';
-    } else {
-        hasil = 'MENANG !';
-    } 
-} else {
-    hasil = "memilih pilihan yang tidak sesuai !!";
-}
 
-// Tampilkan hasilnya 
-alert('Kamu memilih : ' + p + ' dan Komputer memilih : ' + comp + '\nMaka hasilnya adalah : kamu ' + hasil);
+    // Menentukan rules
+    var hasil = '';
+    if (p == comp) {
+        hasil = 'SERI !';
+    } else if (p === 'gajah') {
+        hasil = (comp == 'orang') ? 'MENANG!' : 'KALAH!';
+    } else if (p === 'semut') {
+        hasil = (comp == 'orang') ? 'KALAH!' : 'MENANG!';
+    } else if (p === 'orang') {
+        hasil = (comp == 'gajah') ? 'KALAH!' : 'MENANG!';
+    } else {
+        hasil = "keluar permainan karena kamu memilih pilihan yang tidak sesuai !!";
+    }
+
+    // Tampilkan hasilnya 
+    alert('Kamu memilih : ' + p + ' dan Komputer memilih : ' + comp + '\nMaka hasilnya adalah : kamu ' + hasil);
+    tanya = confirm('apakah ingin bermain lagi?')
+}
+    alert('Kalau begitu terima kasih sudah bermain')
