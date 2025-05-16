@@ -1,4 +1,3 @@
-
 var jumlahAngkot = prompt('masukan jumlah angkot');
     angkotBeroperasi = prompt('Angkot yang beroperasi');
     noAngkot = 1;

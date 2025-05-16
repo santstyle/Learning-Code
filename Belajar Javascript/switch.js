@@ -14,3 +14,19 @@ switch (item) {
         break;
 }
 
+var item = prompt('masukan nama makanan/minuman : \n( cth : nasi,daging,susu,humberger,softdrink)');
+switch (item) {
+    case 'nasi':
+    case 'daging':
+    case 'susu':
+        alert('makamam/minuman sehat');
+        break;
+    case 'humberger':
+    case 'softdrink':
+        alert('makanan/minuman tidak sehat')
+        break;
+    default:
+        alert('makanan/minuman tiddak ada dalam menu');
+        break;
+
+}
